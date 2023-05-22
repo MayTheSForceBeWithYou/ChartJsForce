@@ -1,6 +1,7 @@
 <template>
     <div if:true={isChartJsLoaded}>
         ChartJS is loaded!
+        <canvas class="chart" lwc:dom="manual"></canvas>
     </div>
     <div if:false={isChartJsLoaded}>
         ChartJS loading...
