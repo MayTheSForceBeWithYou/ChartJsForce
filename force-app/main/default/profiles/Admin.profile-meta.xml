@@ -6,5 +6,9 @@
         <visible>true</visible>
     </applicationVisibilities>
     <custom>false</custom>
+    <tabVisibilities>
+        <tab>standard-Pricebook2</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
     <userLicense>Salesforce</userLicense>
 </Profile>
