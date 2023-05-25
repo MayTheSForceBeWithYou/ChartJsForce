@@ -57,7 +57,12 @@ export default class AccountOppAnalytics extends LightningElement {
                         }
                     }
                 };
-                this.chartConfig.options.scales.y.beginAtZero = false;
+                this.chartConfig.options.scales.y.ticks = {
+                    callback: function(value, index, ticks) {
+                        // Divide by 1000, allow 2 decimal places
+                        return (value / 1000).toFixed(1).toString() + 'K';
+                    }
+                };
                 this.chartConfig.data = {};
                 this.chartConfig.data.datasets = [
                     {
